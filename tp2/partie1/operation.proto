@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+option java_package = "ex.grpc";
+
+
+package operation;
+
+//TODO : Defines the service, the request and Reply
+
+service Operation {
+  rpc SayHello (OperationRequest) returns (OperationReply);
+}
+
+message OperationRequest {
+  string task = 1;
+}
+
+message OperationReply {
+  string message = 1;
+}
