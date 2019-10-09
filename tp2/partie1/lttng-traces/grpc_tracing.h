@@ -2,7 +2,7 @@
 #define TRACEPOINT_PROVIDER grpc_tracing
 
 #undef TRACEPOINT_INCLUDE
-#define TRACEPOINT_INCLUDE "./grpc_tracing.h"
+#define TRACEPOINT_INCLUDE "/home/ubuntu/inf8480/tp2/partie1/lttng-traces/grpc_tracing.h"
 
 #if !defined(_TP_H) || defined(TRACEPOINT_HEADER_MULTI_READ)
 #define _TP_H

@@ -15,6 +15,7 @@ using grpc::ChannelArguments;
 using grpc::ClientContext;
 using grpc::Status;
 using grpc::StatusCode;
+using grpc::ClientReader;
 using operation::Operation;
 using operation::OperationRequest;
 using operation::OperationReply;
@@ -36,8 +37,7 @@ public:
         // Context for the client. It could be used to convey extra information to the server and/or tweak certain RPC behaviors.
         ClientContext context;
 
-//TODO : send the gRPC call
-        Status status(StatusCode::OK, "test"); // dummy status response
+        Status status = stub_->ProcessOperation(&context, request, &reply);
 
         char cstr2[reply.message().size() + 1];
         strcpy(cstr2, reply.message().c_str());
